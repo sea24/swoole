@@ -1,5 +1,5 @@
 {
-    "name": "sea/yanghailong",
+    "name": "sea/test/yanghailong",
     "description": "测试",
     "type": "project",
     "license": "mit",
@@ -15,7 +15,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Sea\\YangHaiLong\\": "src/sea"
+            "Sea\\Test\\YangHaiLong\\": "src/sea"
         }
     },
     "repositories": {
