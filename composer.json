@@ -1,38 +1,27 @@
 {
-    "name": "sea/sea_swoole",
-    "description": "Set trusted proxies for Laravel",
-    "keywords": ["proxy", "trusted proxy", "load balancing"],
-    "license": "MIT",
+    "name": "sea/yanghailong",
+    "description": "测试",
+    "type": "project",
+    "license": "mit",
     "authors": [
         {
-            "name": "Chris Fidao",
-            "email": "fideloper@gmail.com"
+            "name": "yanghailong",
+            "email": "2602672132@qq.com"
         }
     ],
+    "minimum-stability": "dev",
     "require": {
-        "php": ">=5.4.0",
-        "illuminate/contracts": "~5.0"
-    },
-    "require-dev": {
-        "illuminate/http": "~5.0",
-        "mockery/mockery": "~0.9.3",
-        "phpunit/phpunit": "^5.7"
+        "php": ">=7.0.0"
     },
     "autoload": {
         "psr-4": {
-            "Fideloper\\Proxy\\": "src/"
+            "Sea\\YangHaiLong\\": "src/sea"
         }
     },
-    "extra": {
-        "branch-alias": {
-            "dev-master": "3.3-dev"
-        },
-        "laravel": {
-            "providers": [
-                "Fideloper\\Proxy\\TrustedProxyServiceProvider"
-            ]
+    "repositories": {
+        "packagist": {
+            "type": "composer",
+            "url": "https://packagist.phpcomposer.com"
         }
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true
+    }
 }
