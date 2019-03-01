@@ -14,7 +14,7 @@ class httpServer
 
     public function __construct($host, $port)
     {
-        echo '发布成功！sssnice';exit;
+        echo '发布成功！sssnice';exit; 
         $server = new Swoole\Http\Server($host, $port);
         $server->set([
             'worker_num' => 1, //woker进程
