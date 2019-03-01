@@ -1,24 +1,18 @@
 {
-    "name": "sea/sea",
-    "type": "library",
-    "description": "Logging for PHP 7.0.0",
-    "keywords": ["log","logging"],
-    "homepage": "https://github.com/sea24/swoole.git",
-    "license": "MIT",
+    "name": "sea/swoole",
+    "description": "Third party message push",
     "authors": [
         {
-            "name": "sea",
-            "email": "2602672132@qq.com",
-            "homepage": "http://seld.be",
-            "role": "Developer"
+            "name": "sea"
         }
     ],
+    "license": "MIT",
     "require": {
-        "php": ">=7.0.0"
+        "php": ">=7.0"
     },
     "autoload": {
-        "psr-0": {
-            "Monolog": "src"
+        "psr-4": {
+            "sea\\swoole\\": "src/"
         }
     }
 }
