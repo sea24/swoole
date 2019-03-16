@@ -9,16 +9,16 @@ https://wiki.swoole.com/wiki/page/6.html
 
 使用 `composer`
 
-在composer.json的require文件加入以下内容:
+在composer.json的require加入以下内容:
 
 ```php
-待定改
+"server-sea/sea-swoole": "1.0.*",
 ```
 
 
 加载源码(终端执行):
 ```php
-composer update jialeo/swoole-distributed
+composer update
 ```
 
 
@@ -57,7 +57,7 @@ return [
 说明：事件回调均在回调路径类里面创建相对应的方法，方法命名规则参照：https://wiki.swoole.com/wiki/page/327.html
 在cli模式执行脚本：
 ```php
-use Sea\Test\YangHaiLong\httpServer 
+use Src\Sea\httpServer 
 
 public function handle()
     {
@@ -95,7 +95,7 @@ return [
 
 在cli模式执行脚本：
 ```php
-use Sea\Test\YangHaiLong\Server\Server as swooleServer;
+use Src\Sea\Server\Server as swooleServer;
 
 public function handle()
     {
@@ -127,7 +127,7 @@ return [
 说明：事件回调均在回调路径类里面创建相对应的方法，方法命名规则参照：https://wiki.swoole.com/wiki/page/400.html
 在cli模式执行脚本：
 ```php
-use Sea\Test\YangHaiLong\WebSocket\WebServer as swooleWebServer;
+use Src\Sea\WebSocket\WebServer as swooleWebServer;
 
 public function handle()
     {
@@ -167,7 +167,7 @@ return [
 ```php
 namespace App\Http\Controllers\Api\Terminal\V1\Receive;
 
-use Sea\Test\YangHaiLong\MysqlPool\DB as seaDB;
+use Src\Sea\MysqlPool\DB as seaDB;
 
 
 class Server
