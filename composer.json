@@ -1,5 +1,5 @@
 {
-    "name": "Sea/SeaSwoole",
+    "name": "Sea/Sea-Swoole",
     "description": "V1版本",
     "type": "project",
     "license": "mit",
@@ -24,4 +24,4 @@
             "url": "https://packagist.phpcomposer.com"
         }
     }
-} 
+}
