@@ -1,5 +1,5 @@
 {
-    "name": "sea/sea-swoole",
+    "name": "server-sea/sea-swoole",
     "description": "V1版本",
     "type": "project",
     "license": "mit",
