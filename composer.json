@@ -1,6 +1,6 @@
 {
-    "name": "yanghailong/seaswoole",
-    "description": "测试",
+    "name": "Sea/SeaSwoole",
+    "description": "V1版本",
     "type": "project",
     "license": "mit",
     "authors": [
@@ -15,7 +15,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Sea\\Test\\YangHaiLong\\": "src/sea"
+            "Src\\Sea\\": "src/sea"
         }
     },
     "repositories": {

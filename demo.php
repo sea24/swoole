@@ -1,5 +1,6 @@
 <?php
 include "vendor/autoload.php";
-use Sea\YangHaiLong\httpServer;
+use Src\Sea\Test;
 
-$httpServer = new httpServer('123', 789);
+$httpServer = new Test();
+print_r($httpServer->test());
