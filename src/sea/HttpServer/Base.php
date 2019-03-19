@@ -5,7 +5,7 @@
 
 namespace Src\Sea\HttpServer;
 
-use Sea\Test\YangHaiLong\Base as superiorBase;
+use Src\Sea\Base as superiorBase;
 
 class Base extends superiorBase
 {
