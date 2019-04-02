@@ -15,52 +15,52 @@ class OnServer extends Base
         self::$_execute != null ?: self::$_execute = new Execute();
     }
 
-    public function onConnect(\Swoole\Server $server, int $fd, int $reactorId)
+    public function onConnect(\Swoole\Server $server, $fd, $reactorId)
     {
         self::$_execute->assign(__FUNCTION__, func_get_args());
     }
 
-    public function onReceive(\Swoole\Server $server, int $fd, int $reactor_id, string $data)
+    public function onReceive(\Swoole\Server $server, $fd, $reactor_id, $data)
     {
         self::$_execute->assign(__FUNCTION__, func_get_args());
     }
 
-    public function onClose(\swoole_server $server, int $fd)
+    public function onClose(\swoole_server $server, $fd)
     {
         self::$_execute->assign(__FUNCTION__, func_get_args());
     }
 
-    public function onWorkerStart(\swoole_server $server, int $worker_id)
+    public function onWorkerStart(\swoole_server $server, $worker_id)
     {
         self::$_execute->assign(__FUNCTION__, func_get_args());
     }
 
-    public function onWorkerStop(\swoole_server $server, int $worker_id)
+    public function onWorkerStop(\swoole_server $server, $worker_id)
     {
         self::$_execute->assign(__FUNCTION__, func_get_args());
     }
 
-    public function onWorkerExit(\swoole_server $server, int $worker_id)
+    public function onWorkerExit(\swoole_server $server, $worker_id)
     {
         self::$_execute->assign(__FUNCTION__, func_get_args());
     }
 
-    public function onTask(\swoole_server $serv, int $task_id, int $src_worker_id, mixed $data)
+    public function onTask(\swoole_server $serv, $task_id, $src_worker_id, $data)
     {
         self::$_execute->assign(__FUNCTION__, func_get_args());
     }
 
-    public function onFinish(\swoole_server $serv, int $task_id, string $data)
+    public function onFinish(\swoole_server $serv, $task_id, $data)
     {
         self::$_execute->assign(__FUNCTION__, func_get_args());
     }
 
-    public function onPipeMessage(\swoole_server $server, int $src_worker_id, mixed $message)
+    public function onPipeMessage(\swoole_server $server, $src_worker_id, $message)
     {
         self::$_execute->assign(__FUNCTION__, func_get_args());
     }
 
-    public function onWorkerError(\swoole_server $serv, int $worker_id, int $worker_pid, int $exit_code, int $signal)
+    public function onWorkerError(\swoole_server $serv, $worker_id, $worker_pid, $exit_code, $signal)
     {
         self::$_execute->assign(__FUNCTION__, func_get_args());
     }
@@ -80,12 +80,12 @@ class OnServer extends Base
         self::$_execute->assign(__FUNCTION__, func_get_args());
     }
 
-    public function onBufferFull(\Swoole\Server $serv, int $fd)
+    public function onBufferFull(\Swoole\Server $serv, $fd)
     {
         self::$_execute->assign(__FUNCTION__, func_get_args());
     }
 
-    public function onBufferEmpty(\Swoole\Server $serv, int $fd)
+    public function onBufferEmpty(\Swoole\Server $serv, $fd)
     {
         self::$_execute->assign(__FUNCTION__, func_get_args());
     }
