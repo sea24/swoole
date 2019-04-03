@@ -30,9 +30,9 @@ class Server extends Base
         /**
          * 初始化设置
          */
-        self::$_server->set([
-            self::$_config->set,
-        ]);
+        self::$_server->set(
+            self::$_config->set
+        );
 
         $onServer = self::$_onServer;
         //worker进程回调
