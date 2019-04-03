@@ -12,7 +12,7 @@ https://wiki.swoole.com/wiki/page/6.html
 在composer.json的require加入以下内容:
 
 ```php
-"server-sea/sea-swoole": "1.0.*",
+"server-sea/sea-swoole": "~1.0",
 ```
 
 
@@ -49,7 +49,10 @@ return [
             ], //设置httpServer
             'notice_url' => '\App\Http\Controllers\Api\Terminal\V1\Receive\HttpServer', //通知路径
             'request' => 'request', //请求信息
-            'log' => '/wwwroot/swoole.log', //代码异常报错日志
+            'log' => [
+                 'log_file' => 'swoole',//日志文件名
+                 'log_path' => '/wwwroot', //日志存放地方
+            ], //代码异常报错日志
         ]
     ]
 ];
@@ -57,6 +60,7 @@ return [
 说明：事件回调均在回调路径类里面创建相对应的方法，方法命名规则参照：https://wiki.swoole.com/wiki/page/327.html
 在cli模式执行脚本：
 ```php
+<?php
 use Src\Sea\httpServer 
 
 public function handle()
@@ -68,6 +72,7 @@ public function handle()
 
 ## Server配置
 ```php
+<?php
 return [
     /*Server服务器配置*/
     'Server' => [
@@ -85,7 +90,10 @@ return [
                 'max_coroutine' => 200, //当前工作最大协程数量
             ], //这是server
             'notice_url' => '\App\Http\Controllers\Api\Terminal\V1\Receive\HttpServer', //协程回调路径
-            'log' => '/wwwroot/swoole.log', //日志路径
+            'log' => [
+                 'log_file' => 'swoole',//日志文件名
+                 'log_path' => '/wwwroot', //日志存放地方
+            ], //代码异常报错日志
         ]
     ]
 ];
@@ -95,6 +103,7 @@ return [
 
 在cli模式执行脚本：
 ```php
+<?php
 use Src\Sea\Server\Server as swooleServer;
 
 public function handle()
@@ -118,7 +127,10 @@ return [
                 'open_websocket_close_frame' => false,
             ], //这是server
             'notice_url' => '\App\Http\Controllers\Api\Terminal\V1\Receive\WebSocket', //协程回调路径
-            'log' => '/wwwroot/swoole.log',
+            'log' => [
+                 'log_file' => 'swoole',//日志文件名
+                 'log_path' => '/wwwroot', //日志存放地方
+            ], //代码异常报错日志
         ]
     ]
 ];
@@ -127,6 +139,7 @@ return [
 说明：事件回调均在回调路径类里面创建相对应的方法，方法命名规则参照：https://wiki.swoole.com/wiki/page/400.html
 在cli模式执行脚本：
 ```php
+<?php
 use Src\Sea\WebSocket\WebServer as swooleWebServer;
 
 public function handle()
@@ -140,6 +153,7 @@ public function handle()
 ## Mysql数据库连接池
 配置文件
 ```php
+<?php
 return [
     /*Mysql连接池*/
     'Mysql' => [
@@ -165,6 +179,7 @@ return [
 使用方法，（底层实现协程mysql，连接池组，等待连接池。）仅在当前进程中使用
 
 ```php
+<?php
 namespace App\Http\Controllers\Api\Terminal\V1\Receive;
 
 use Src\Sea\MysqlPool\DB as seaDB;

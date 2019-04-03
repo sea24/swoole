@@ -17,6 +17,10 @@ class Log
 
     public function error($filename, $data)
     {
-        file_put_contents($filename, $this->time . json_encode($data) . PHP_EOL, FILE_APPEND);
+        $path = $filename['log_path'] . '/' . $filename['log_file'] . '-' . date("Y-m-d", time()) . '.log';
+        if (!file_exists($path)) {
+            fopen($path, 'w+');
+        }
+        file_put_contents($path, $this->time . json_encode($data) . PHP_EOL, FILE_APPEND);
     }
 }
